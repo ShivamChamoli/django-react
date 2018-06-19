@@ -1,0 +1,11 @@
+.modal-left-side{
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+.modal-right-side{
+    width: 60%;
+    height: 100%;
+    float: right;
+}
