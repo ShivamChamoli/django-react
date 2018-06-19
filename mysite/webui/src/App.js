@@ -26,14 +26,15 @@ class App extends Component {
   }
 
   componentWillMount() {
-    var request = new Request("http://127.0.0.1:8000/partners/");
+    var request = new Request("http://127.0.0.1:8000/backend/partners");
 
         fetch(request).then(function(response) {
         // Convert to JSON
-            return response.json();
-        }).then(function(j) {
+            console.log(response.text());
+            //return response.json();
+        /*}).then(function(j) {
             // Yay, `j` is a JavaScript object
-            console.log(JSON.stringify(j)); 
+            console.log(JSON.stringify(j));*/ 
         }).catch(function(error) {  
             console.log('Request failed', error)  
         });
