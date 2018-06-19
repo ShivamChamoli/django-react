@@ -9,12 +9,12 @@ def index(request):
 
 #def partners(request):
 #    var partners = []
+class Partners:
+    def returnAllPartners(request):
+        partner_list = Partner.objects.all()
+        output = ', '.join([p.partner_name for p in partner_list])
+        return HttpResponse(output)
 
-def returnAllPartners(request):
-    partner_list = Partner.objects.all()
-    output = ', '.join([p.partner_name for p in partner_list])
-    return HttpResponse(output)
-
-def getPartner(request, partner_id):
-    return HttpResponse("You're looking at partner %s." % partner_id)
+    def getPartner(request, partner_id):
+        return HttpResponse("You're looking at partner %s." % partner_id)
     
